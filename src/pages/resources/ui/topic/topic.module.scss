@@ -17,12 +17,12 @@
   .description {
     font-size: 0.875rem;
   }
-}
 
-.line {
-  height: 0.5px;
-  background-color: #000;
-  margin-bottom: 10px;
+  .line {
+    height: 0.5px;
+    background-color: #000;
+    margin-bottom: 10px;
+  }
 }
 
 @include mixins.breakpoint(md, max) {

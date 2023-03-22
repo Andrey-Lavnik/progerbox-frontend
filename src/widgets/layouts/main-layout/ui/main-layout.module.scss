@@ -1,27 +1,12 @@
 @use '@/shared/styles/mixins';
 
-.layoutContainer {
+.layout {
+  position: relative;
   display: flex;
   flex-direction: row;
-
-  width: 85%;
+  max-width: 2000px;
+  min-height: calc(100vh - 66px);
   margin: auto;
-
-  @include mixins.breakpoint(xxl, max) {
-    width: 100%;
-  }
-
-  @include mixins.breakpoint(md, max) {
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-}
-
-.sidebar {
-  @include mixins.breakpoint(xxl, max) {
-    display: none;
-  }
 }
 
 .columnBlockTop,
@@ -29,4 +14,47 @@
   width: 286px;
   height: 286px;
   background-color: #aaa;
+}
+
+@include mixins.breakpoint(md, max) {
+  .layout {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@include mixins.breakpoint(xxl, max) {
+  .layout {
+    width: 100%;
+  }
+
+  .sidebar {
+    position: absolute;
+    left: 0;
+    background-color: var(--background-color);
+    overflow-y: hidden;
+    transform: translateX(-100%);
+    transition: transform ease-out 0.2s;
+  }
+
+  .sidebarOpen {
+    @extend .sidebar;
+    transform: translateX(0);
+  }
+
+  .dark {
+    position: absolute;
+    height: calc(100vh - 66px);
+    width: 100vw;
+    background-color: #000;
+    opacity: 0.35;
+    // transition: opacity linear 0.2s;
+  }
+
+  .transparent {
+    @extend .dark;
+    opacity: 0;
+    z-index: -1;
+  }
 }

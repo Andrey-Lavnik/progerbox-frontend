@@ -1,6 +1,6 @@
-import styles from './column.module.scss';
 import React, { FC, ReactNode } from 'react';
 import { uniteClasses } from '@/shared';
+import styles from './column.module.scss';
 
 interface Props {
   children?: ReactNode;

@@ -1,5 +1,5 @@
-import styles from './sidebar-section.module.scss';
 import React, { FC } from 'react';
+import styles from './sidebar-section.module.scss';
 
 export interface ISidebarSection {
   id?: number;

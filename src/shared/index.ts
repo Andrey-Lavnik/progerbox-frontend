@@ -3,3 +3,4 @@
 
 export { categoriesStub } from './stubs/categories';
 export { uniteClasses } from './libs/unite-classes';
+export { Burger } from './ui/burger/burger';
