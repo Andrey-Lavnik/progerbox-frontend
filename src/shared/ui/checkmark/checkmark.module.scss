@@ -1,0 +1,9 @@
+.container {
+  position: relative;
+  cursor: pointer;
+
+  .box,
+  .check {
+    position: absolute;
+  }
+}

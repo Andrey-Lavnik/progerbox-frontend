@@ -24,8 +24,7 @@ export const MainLayout: FC<Props> = ({ children }) => {
         <Sidebar className={open ? styles.sidebarOpen : styles.sidebar} categoriesData={categoriesStub.data} />
         {children ?? null}
         <Column>
-          <div className={styles.columnBlockTop} />
-          <div className={styles.columnBLockBottom} />
+          <div className={styles.columnBlock} />
         </Column>
       </div>
     </div>

@@ -3,12 +3,14 @@
 :root {
   // Light theme
   --background-color: #fafafa;
-  --text-color: #767474;
-  --heading-text-color: #1e1e24;
+  --text-color: #686868;
   --header-bar-color: #337ca0;
-  //--headings-color: #64afd3; // Not sure where it must be used. Uncomment if needed
-  --hover-text-color: #468fb3;
+  --topic-text-color: #1e1e24;
+  --heading-color: #64afd3;
 
-  // Dark theme
-  // TBD
+  // GLOBAL STYLES
+  line-height: 1.17rem;
+  background-color: var(--background-color);
+
+  // Dark theme [TBD]
 }

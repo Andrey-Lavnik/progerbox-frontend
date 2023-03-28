@@ -10,7 +10,7 @@ interface Props {
 export const Topic: FC<Props> = ({ title, description }) => {
   return (
     <div className={styles.container}>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       <div className={styles.line} />
       <p className={styles.description}>{description}</p>
     </div>
