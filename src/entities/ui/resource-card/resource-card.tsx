@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import { Checkmark } from '../../../shared/ui/checkmark/checkmark';
-import styles from './resource.module.scss';
+import { Checkmark } from '@/shared/ui/checkmark/checkmark';
+import styles from './resource-card.module.scss';
 
-export const Card = () => {
+export const ResourceCard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.cardLinks}>
@@ -14,7 +14,7 @@ export const Card = () => {
         <div className={styles.status}>
           <Image
             className={styles.flag}
-            src="/icons/resource-card/favourites.svg"
+            src="/icons/bookmark.svg"
             alt="Add to favourites"
             width={15}
             height={21}
