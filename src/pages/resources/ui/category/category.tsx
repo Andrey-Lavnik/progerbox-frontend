@@ -1,4 +1,4 @@
-import styles from './topic.module.scss';
+import styles from './category.module.scss';
 import React, { FC } from 'react';
 
 interface Props {
@@ -7,10 +7,10 @@ interface Props {
   description: string;
 }
 
-export const Topic: FC<Props> = ({ title, description }) => {
+export const Category: FC<Props> = ({ title, description }) => {
   return (
     <div className={styles.container}>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       <div className={styles.line} />
       <p className={styles.description}>{description}</p>
     </div>

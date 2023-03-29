@@ -1,16 +1,10 @@
 @use '@/shared/styles/mixins';
 
 .container {
-  margin: 60px 30px;
+  margin: 80px 45px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-@include mixins.breakpoint(xxl, max) {
-  .container {
-    margin: 60px;
-  }
 }
 
 @include mixins.breakpoint(lg, max) {
@@ -22,6 +16,6 @@
 @include mixins.breakpoint(md, max) {
   .container {
     flex-direction: row;
-    margin: 46px auto;
+    margin: 0 auto 63px auto;
   }
 }

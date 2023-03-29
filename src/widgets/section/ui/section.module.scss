@@ -1,0 +1,17 @@
+.container {
+  background-color: #fff;
+  border: 0 solid transparent;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 25px 0;
+
+  h2 {
+    border-radius: 10px 10px 0% 0%;
+    margin: 0;
+    padding: 8px 10px;
+    background-color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+  }
+}

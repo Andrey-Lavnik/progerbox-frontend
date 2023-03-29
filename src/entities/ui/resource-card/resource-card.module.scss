@@ -1,0 +1,42 @@
+.container {
+  padding: 15px 20px 20px 10px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #000;
+  }
+
+  .cardLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    .link {
+      margin-right: 12px;
+    }
+  }
+
+  .status {
+    display: flex;
+    position: relative;
+    right: 20px;
+    .flag {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .links,
+  .description {
+    color: var(--text-color);
+    font-size: 0.875rem;
+  }
+}
