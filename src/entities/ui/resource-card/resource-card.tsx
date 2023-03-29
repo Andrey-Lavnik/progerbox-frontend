@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { Checkmark } from '@/shared/ui/checkmark/checkmark';
+import { Checkmark } from '@/shared';
 import styles from './resource-card.module.scss';
 
 export const ResourceCard = () => {
