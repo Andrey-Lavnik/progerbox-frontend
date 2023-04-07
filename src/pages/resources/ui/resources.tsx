@@ -1,10 +1,11 @@
 import { MainLayout, Section } from '@/widgets';
-import { categoriesStub } from '@/shared';
+import { resourcesStub } from '@/shared';
 import { Category } from './category/category';
-import styles from './resources.module.scss'
+import styles from './resources.module.scss';
 
 export const Resources = () => {
-  const topic = categoriesStub.data[0].topics[0];
+  const topic = resourcesStub.data[0].topics[0];
+
   return (
     <MainLayout>
       <div className={styles.container}>

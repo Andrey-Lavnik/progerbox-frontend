@@ -1,15 +1,19 @@
 @use '@/shared/styles/mixins';
 
 .container {
-  margin: 80px 45px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  margin: 80px 105px 80px 45px;
+}
+
+@include mixins.breakpoint(xl, max) {
+  .container {
+    margin-right: 75px;
+  }
 }
 
 @include mixins.breakpoint(lg, max) {
   .container {
     margin-left: 20px;
+    margin-right: 45px;
   }
 }
 

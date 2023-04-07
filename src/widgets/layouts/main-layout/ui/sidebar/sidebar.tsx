@@ -1,19 +1,24 @@
-import { ISidebarSection, SidebarSection } from './sidebar-section';
-import styles from './sidebar.module.scss';
+import { SidebarSection } from './sidebar-section';
 import React, { FC } from 'react';
 import { uniteClasses } from '@/shared';
+import { Categories } from '../main-layout';
+import styles from './sidebar.module.scss';
 
 interface Props {
-  categoriesData: ISidebarSection[];
+  categories: Categories;
   className?: string;
 }
 
-// TODO in future - move out to shared layer and reuse there (to make different layouts with sidebar)
-export const Sidebar: FC<Props> = ({ categoriesData, className }) => {
+export const Sidebar: FC<Props> = ({ categories, className }) => {
+  const categoryType: Record<string, string> = {
+    common: 'ОБЩАЯ ИНФОРМАЦИЯ',
+    technology: 'ТЕХНОЛОГИИ',
+  };
+
   return (
     <div className={uniteClasses(styles.sidebar, className)}>
-      {categoriesData.map((data, index) => (
-        <SidebarSection key={index} section={data.section} topics={data.topics} />
+      {Object.entries(categories).map((categoryArray, index) => (
+        <SidebarSection key={index} type={categoryType[categoryArray[0]]} categoryArray={categoryArray[1]} />
       ))}
     </div>
   );

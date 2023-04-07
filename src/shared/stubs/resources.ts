@@ -1,4 +1,4 @@
-export const categoriesStub = {
+export const resourcesStub = {
   data: [
     {
       id: 1,
