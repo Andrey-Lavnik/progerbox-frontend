@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Category } from '../main-layout';
+import { Category } from './sidebar';
 import styles from './sidebar-section.module.scss';
 
 export interface ISidebarSection {
