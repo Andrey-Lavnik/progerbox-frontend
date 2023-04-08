@@ -1,8 +1,8 @@
-import { categoriesStub } from '@/shared';
 import { Header } from '@/widgets';
 import { Sidebar } from './sidebar/sidebar';
 import { Column } from './column/column';
 import { FC, ReactNode, useState } from 'react';
+import { categoriesStub } from '@/shared';
 import styles from './main-layout.module.scss';
 
 interface Props {
@@ -21,7 +21,7 @@ export const MainLayout: FC<Props> = ({ children }) => {
       <Header isOpen={open} onClick={toggleSidebar} />
       <div className={styles.layout}>
         <div className={open ? styles.dark : styles.transparent} />
-        <Sidebar className={open ? styles.sidebarOpen : styles.sidebar} categoriesData={categoriesStub.data} />
+        <Sidebar className={open ? styles.sidebarOpen : styles.sidebar} categories={categoriesStub} />
         {children ?? null}
         <Column>
           <div className={styles.columnBlock} />
